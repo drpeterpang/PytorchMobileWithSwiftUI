@@ -13,6 +13,10 @@
 		0305A8F223CBE6C400D4A601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0305A8F123CBE6C400D4A601 /* Assets.xcassets */; };
 		0305A8F523CBE6C400D4A601 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0305A8F423CBE6C400D4A601 /* Preview Assets.xcassets */; };
 		0305A8F823CBE6C400D4A601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0305A8F623CBE6C400D4A601 /* LaunchScreen.storyboard */; };
+		0305A90323CBE6DB00D4A601 /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0305A90123CBE6DB00D4A601 /* TorchModule.mm */; };
+		0305A90623CBE6F900D4A601 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0305A90523CBE6F900D4A601 /* words.txt */; };
+		0305A90823CBE70300D4A601 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0305A90723CBE70300D4A601 /* ImageUtil.swift */; };
+		0305A90A23CBE70E00D4A601 /* trace_model.py in Resources */ = {isa = PBXBuildFile; fileRef = 0305A90923CBE70E00D4A601 /* trace_model.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,12 @@
 		0305A8F423CBE6C400D4A601 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0305A8F723CBE6C400D4A601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0305A8F923CBE6C400D4A601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0305A90023CBE6DA00D4A601 /* PytorchMobileWithSwiftUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PytorchMobileWithSwiftUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		0305A90123CBE6DB00D4A601 /* TorchModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
+		0305A90223CBE6DB00D4A601 /* TorchModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
+		0305A90523CBE6F900D4A601 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		0305A90723CBE70300D4A601 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		0305A90923CBE70E00D4A601 /* trace_model.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = trace_model.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,10 @@
 		0305A8EA23CBE6C200D4A601 /* PytorchMobileWithSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				0305A90923CBE70E00D4A601 /* trace_model.py */,
+				0305A90723CBE70300D4A601 /* ImageUtil.swift */,
+				0305A90423CBE6F900D4A601 /* model */,
+				0305A8FF23CBE6CD00D4A601 /* TorchBridge */,
 				0305A8EB23CBE6C200D4A601 /* AppDelegate.swift */,
 				0305A8ED23CBE6C200D4A601 /* SceneDelegate.swift */,
 				0305A8EF23CBE6C200D4A601 /* ContentView.swift */,
@@ -73,6 +87,24 @@
 				0305A8F423CBE6C400D4A601 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0305A8FF23CBE6CD00D4A601 /* TorchBridge */ = {
+			isa = PBXGroup;
+			children = (
+				0305A90223CBE6DB00D4A601 /* TorchModule.h */,
+				0305A90123CBE6DB00D4A601 /* TorchModule.mm */,
+				0305A90023CBE6DA00D4A601 /* PytorchMobileWithSwiftUI-Bridging-Header.h */,
+			);
+			path = TorchBridge;
+			sourceTree = "<group>";
+		};
+		0305A90423CBE6F900D4A601 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0305A90523CBE6F900D4A601 /* words.txt */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +139,7 @@
 				TargetAttributes = {
 					0305A8E723CBE6C200D4A601 = {
 						CreatedOnToolsVersion = 11.2;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -135,6 +168,8 @@
 			files = (
 				0305A8F823CBE6C400D4A601 /* LaunchScreen.storyboard in Resources */,
 				0305A8F523CBE6C400D4A601 /* Preview Assets.xcassets in Resources */,
+				0305A90623CBE6F900D4A601 /* words.txt in Resources */,
+				0305A90A23CBE70E00D4A601 /* trace_model.py in Resources */,
 				0305A8F223CBE6C400D4A601 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +181,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0305A90323CBE6DB00D4A601 /* TorchModule.mm in Sources */,
 				0305A8EC23CBE6C200D4A601 /* AppDelegate.swift in Sources */,
+				0305A90823CBE70300D4A601 /* ImageUtil.swift in Sources */,
 				0305A8EE23CBE6C200D4A601 /* SceneDelegate.swift in Sources */,
 				0305A8F023CBE6C200D4A601 /* ContentView.swift in Sources */,
 			);
@@ -284,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"PytorchMobileWithSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
@@ -294,6 +332,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hellopytorch.PytorchMobileWithSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PytorchMobileWithSwiftUI/TorchBridge/PytorchMobileWithSwiftUI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -303,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"PytorchMobileWithSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
@@ -313,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hellopytorch.PytorchMobileWithSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PytorchMobileWithSwiftUI/TorchBridge/PytorchMobileWithSwiftUI-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
